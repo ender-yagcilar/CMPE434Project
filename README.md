@@ -1,4 +1,4 @@
-# CMPE434Project
+# CMPE434 - Introduction to Robotics Term Project
 
 ## Introduction
 
