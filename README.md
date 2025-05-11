@@ -32,3 +32,36 @@ APF was chosen for local planning due to its **real-time responsiveness** and **
 
 By combining PRM and APF, the system benefits from both **efficient global path generation** and **adaptive local obstacle avoidance**, making it well-suited for navigating a dynamic MuJoCo environment.
 
+## Problems Faced and How I Solved Them
+
+During the project, I ran into a few challenges that affected the robot's navigation performance. Here are the two main ones:
+
+### 1. Trouble with Sharp Turns at High Speed
+
+At higher speeds, the robot couldn't take sharp turns effectively. It would often overshoot or drift wide, which caused instability or even collisions.
+
+**Solution:**  
+I added a simple fix by **scaling the velocity based on the steering angle**. If the robot is turning sharply, it moves slower; if the path is straight, it speeds up. This helped keep the movement more stable and realistic.
+
+### 2. Weak Reactions to Dynamic Obstacles
+
+In early tests, the robot didn’t respond well to moving obstacles — it reacted too late and sometimes got dangerously close.
+
+**Solution:**  
+I **tuned the parameters** of the Artificial Potential Field (APF) algorithm. By increasing the repulsive force and its range, the robot started reacting earlier and avoided obstacles more safely.
+
+These small changes made a big difference in the system's performance.
+
+## Results
+
+After implementing the PRM and APF planners and making the necessary adjustments, the robot was able to navigate successfully in the MuJoCo simulation environment.
+
+### Key Outcomes:
+
+- ✅ The robot consistently reached the goal without any collisions.
+- 🔁 It was able to **replan and adjust its path** when dynamic obstacles moved into its way.
+- ⚙️ The combination of PRM (for global planning) and APF (for local obstacle avoidance) worked well together, balancing long-term pathfinding with short-term reactivity.
+
+
+While there’s still room for improvement in terms of more advanced obstacle prediction or smoothing the trajectory further, the system successfully met the project’s main goal: **reaching the target in a dynamic environment without collisions**.
+
