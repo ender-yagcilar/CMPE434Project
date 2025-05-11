@@ -18,11 +18,15 @@ Choosing the right motion planning algorithms is critical for balancing performa
 
 ### Why Probabilistic Roadmap (PRM) for Global Planning?
 
+![Global Planner](images/GlobalPlanner.png)
+
 PRM is a sampling-based planner that works particularly well in **high-dimensional configuration spaces** and **static environments**. For this project, it was ideal for global planning because:
 - It **preprocesses the static environment** to build a roadmap offline, which saves computation during execution.
 - It is **scalable** and can efficiently handle complex spaces without requiring an explicit map decomposition.
 
 ### Why Artificial Potential Field (APF) for Local Planning?
+
+![Obstacle Avoidance](images/Video Project 2.gif)
 
 APF was chosen for local planning due to its **real-time responsiveness** and **simplicity**:
 - APF provides **fast reactions** to dynamic obstacles by treating them as repulsive forces, while the goal attracts the robot.
