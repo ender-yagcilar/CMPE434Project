@@ -26,7 +26,9 @@ PRM is a sampling-based planner that works particularly well in **high-dimension
 
 ### Why Artificial Potential Field (APF) for Local Planning?
 
-![Obstacle Avoidance](images/ObstacleAvoidance.gif)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8f552c44-8417-4d58-9eed-7f1312cb8e8c" alt="Robot Demo" width="400">
+</p>
 
 APF was chosen for local planning due to its **real-time responsiveness** and **simplicity**:
 - APF provides **fast reactions** to dynamic obstacles by treating them as repulsive forces, while the goal attracts the robot.
